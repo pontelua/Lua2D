@@ -86,7 +86,7 @@ public:
 			pwszBuffer = new wchar_t[nBufLen];
 			CC_BREAK_IF(! pwszBuffer);
 			memset(pwszBuffer,0,nBufLen);
-			nLen = MultiByteToWideChar(CP_UTF8, 0, nString.c_str(), nLen, pwszBuffer, nBufLen);		
+			nLen = MultiByteToWideChar(CP_ACP, 0, nString.c_str(), nLen, pwszBuffer, nBufLen);		
 			pwszBuffer[nLen] = '\0';
 		} while (0);	
 		return pwszBuffer;
@@ -272,7 +272,7 @@ public:
             CC_BREAK_IF(! pwszBuffer);
 
             memset(pwszBuffer, 0, sizeof(wchar_t)*nBufLen);
-            nLen = MultiByteToWideChar(CP_UTF8, 0, pszText, nLen, pwszBuffer, nBufLen);
+            nLen = MultiByteToWideChar(CP_ACP, 0, pszText, nLen, pwszBuffer, nBufLen);
 
             SIZE newSize = sizeWithText(pwszBuffer, nLen, dwFmt, tSize.cx);
 
