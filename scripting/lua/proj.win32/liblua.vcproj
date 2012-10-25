@@ -41,7 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="&quot;$(SolutionDir)scripting\lua\tolua&quot;;&quot;$(SolutionDir)scripting\lua\lua&quot;"
+				AdditionalIncludeDirectories="..\tolua;..\lua;..\socket;"
 				PreprocessorDefinitions="WIN32;_WINDOWS;_USRDLL"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -109,7 +109,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="&quot;$(SolutionDir)scripting\lua\tolua&quot;;&quot;$(SolutionDir)scripting\lua\lua&quot;"
+				AdditionalIncludeDirectories="..\tolua;..\lua;..\socket;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBLUA_EXPORTS"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"

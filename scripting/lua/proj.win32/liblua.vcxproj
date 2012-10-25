@@ -51,7 +51,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)scripting\lua\tolua;$(SolutionDir)scripting\lua\lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\tolua;..\lua;..\socket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -74,7 +74,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>$(SolutionDir)scripting\lua\tolua;$(SolutionDir)scripting\lua\lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\tolua;..\lua;..\socket;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBLUA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -124,6 +124,21 @@
     <ClCompile Include="..\lua\lvm.c" />
     <ClCompile Include="..\lua\lzio.c" />
     <ClCompile Include="..\lua\print.c" />
+    <ClCompile Include="..\socket\auxiliar.c" />
+    <ClCompile Include="..\socket\buffer.c" />
+    <ClCompile Include="..\socket\except.c" />
+    <ClCompile Include="..\socket\fullluasocket.c" />
+    <ClCompile Include="..\socket\inet.c" />
+    <ClCompile Include="..\socket\luasocket.c" />
+    <ClCompile Include="..\socket\luasocketscripts.c" />
+    <ClCompile Include="..\socket\mime.c" />
+    <ClCompile Include="..\socket\options.c" />
+    <ClCompile Include="..\socket\select.c" />
+    <ClCompile Include="..\socket\socketio.c" />
+    <ClCompile Include="..\socket\tcp.c" />
+    <ClCompile Include="..\socket\timeout.c" />
+    <ClCompile Include="..\socket\udp.c" />
+    <ClCompile Include="..\socket\wsocket.c" />
     <ClCompile Include="..\tolua\tolua_event.c" />
     <ClCompile Include="..\tolua\tolua_is.c" />
     <ClCompile Include="..\tolua\tolua_map.c" />
@@ -154,6 +169,22 @@
     <ClInclude Include="..\lua\lundump.h" />
     <ClInclude Include="..\lua\lvm.h" />
     <ClInclude Include="..\lua\lzio.h" />
+    <ClInclude Include="..\socket\auxiliar.h" />
+    <ClInclude Include="..\socket\buffer.h" />
+    <ClInclude Include="..\socket\except.h" />
+    <ClInclude Include="..\socket\fullluasocket.h" />
+    <ClInclude Include="..\socket\inet.h" />
+    <ClInclude Include="..\socket\luasocket.h" />
+    <ClInclude Include="..\socket\luasocketscripts.h" />
+    <ClInclude Include="..\socket\mime.h" />
+    <ClInclude Include="..\socket\options.h" />
+    <ClInclude Include="..\socket\select.h" />
+    <ClInclude Include="..\socket\socket.h" />
+    <ClInclude Include="..\socket\socketio.h" />
+    <ClInclude Include="..\socket\tcp.h" />
+    <ClInclude Include="..\socket\timeout.h" />
+    <ClInclude Include="..\socket\udp.h" />
+    <ClInclude Include="..\socket\wsocket.h" />
     <ClInclude Include="..\tolua\tolua++.h" />
     <ClInclude Include="..\tolua\tolua_event.h" />
   </ItemGroup>

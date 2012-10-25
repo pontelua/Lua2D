@@ -40,10 +40,27 @@ LOCAL_SRC_FILES :=../../lua/lapi.c \
           ../../tolua/tolua_is.c \
           ../../tolua/tolua_map.c \
           ../../tolua/tolua_push.c \
-          ../../tolua/tolua_to.c
+          ../../tolua/tolua_to.c \
+          ../../socket/auxiliar.c \
+          ../../socket/buffer.c \
+          ../../socket/except.c \
+          ../../socket/fullluasocket.c \
+          ../../socket/inet.c \
+          ../../socket/luasocket.c \
+          ../../socket/luasocketscripts.c \
+          ../../socket/mime.c \
+          ../../socket/options.c \
+          ../../socket/select.c \
+          ../../socket/socketio.c \
+          ../../socket/tcp.c \
+          ../../socket/timeout.c \
+          ../../socket/udp.c \
+          ../../socket/unix.c \
+          ../../socket/usocket.c
           
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)/../../lua \
                            $(LOCAL_PATH)/../../tolua \
+                           $(LOCAL_PATH)/../../socket \
                            $(LOCAL_PATH)/../../cocos2dx_support 
           
           

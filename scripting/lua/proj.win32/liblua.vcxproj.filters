@@ -7,6 +7,9 @@
     <Filter Include="tolua">
       <UniqueIdentifier>{243d29bc-c49a-4d05-8e2f-2c2f5858928a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="socket">
+      <UniqueIdentifier>{e1f9ef08-2378-4117-b6e7-6dcd528e4a05}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\lua\lapi.c">
@@ -117,6 +120,51 @@
     <ClCompile Include="..\tolua\tolua_to.c">
       <Filter>tolua</Filter>
     </ClCompile>
+    <ClCompile Include="..\socket\auxiliar.c">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\socket\buffer.c">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\socket\except.c">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\socket\fullluasocket.c">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\socket\inet.c">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\socket\luasocket.c">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\socket\luasocketscripts.c">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\socket\mime.c">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\socket\options.c">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\socket\select.c">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\socket\socketio.c">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\socket\tcp.c">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\socket\timeout.c">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\socket\udp.c">
+      <Filter>socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\socket\wsocket.c">
+      <Filter>socket</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\lua\lapi.h">
@@ -193,6 +241,54 @@
     </ClInclude>
     <ClInclude Include="..\tolua\tolua_event.h">
       <Filter>tolua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\socket\auxiliar.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\socket\buffer.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\socket\except.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\socket\fullluasocket.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\socket\inet.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\socket\luasocket.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\socket\luasocketscripts.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\socket\mime.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\socket\options.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\socket\select.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\socket\socket.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\socket\socketio.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\socket\tcp.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\socket\timeout.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\socket\udp.h">
+      <Filter>socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\socket\wsocket.h">
+      <Filter>socket</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
