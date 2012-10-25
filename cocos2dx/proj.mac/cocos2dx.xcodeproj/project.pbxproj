@@ -1299,8 +1299,8 @@
 		1551A336158F2AB200E66CFE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
-				ORGANIZATIONNAME = "Âé¶Èó®ÈõÖÂü∫ËΩØ‰ª∂ÊúâÈôêÂÖ¨Âè∏";
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "??ó®?ÖÂü∫ËΩ?ª∂?âÈôê?¨Âè∏";
 			};
 			buildConfigurationList = 1551A339158F2AB200E66CFE /* Build configuration list for PBXProject "cocos2dx" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1498,7 +1498,7 @@
 				GCC_PREFIX_HEADER = "cocos2dx-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					USE_FILE32API,
-					TARGET_OS_MAC,
+					OS_MAC,
 					"COCOS2D_DEBUG=1",
 				);
 				HEADER_SEARCH_PATHS = (
@@ -1525,7 +1525,7 @@
 				GCC_PREFIX_HEADER = "cocos2dx-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					USE_FILE32API,
-					TARGET_OS_MAC,
+					OS_MAC,
 				);
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/..\"",
