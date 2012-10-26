@@ -1,3 +1,4 @@
+-- require("debugger")()
 
 -- for CCLuaEngine traceback
 function __G__TRACKBACK__(msg)
@@ -22,6 +23,7 @@ local function main()
     ---------------
 
     local winSize = CCDirector:sharedDirector():getWinSize()
+    cclog("winSizse: %0.2f, %0.2f", winSize.width, winSize.height)
 
     -- add the moving dog
     local function creatDog()
@@ -69,17 +71,20 @@ local function main()
     -- create farm
     local function createLayerFarm()
         local layerFarm = CCLayer:create()
+		local bg_pt = CCPoint(winSize.width / 2, winSize.height / 2)
 
         -- add in farm background
         local bg = CCSprite:create("farm.jpg")
-        bg:setPosition(winSize.width / 2 + 80, winSize.height / 2)
+--        bg:setPosition(winSize.width / 2 + 80, winSize.height / 2)
+        bg:setPosition(bg_pt.x, bg_pt.y)
         layerFarm:addChild(bg)
 
         -- add land sprite
         for i = 0, 3 do
             for j = 0, 1 do
                 local spriteLand = CCSprite:create("land.png")
-                spriteLand:setPosition(200 + j * 180 - i % 2 * 90, 10 + i * 95 / 2)
+--                spriteLand:setPosition(200 + j * 180 - i % 2 * 90, 10 + i * 95 / 2)
+                spriteLand:setPosition(bg_pt.x - 50 + j * 180 - i % 2 * 90, bg_pt.y - 184 + i * 95 / 2)
                 layerFarm:addChild(spriteLand)
             end
         end
@@ -89,7 +94,8 @@ local function main()
         for i = 0, 3 do
             for j = 0, 1 do
                 local spriteCrop = CCSprite:createWithSpriteFrame(frameCrop);
-                spriteCrop:setPosition(10 + 200 + j * 180 - i % 2 * 90, 30 + 10 + i * 95 / 2)
+--                spriteCrop:setPosition(10 + 200 + j * 180 - i % 2 * 90, 30 + 10 + i * 95 / 2)
+                spriteCrop:setPosition(10 + bg_pt.x - 50 + j * 180 - i % 2 * 90, 30 + bg_pt.y - 184 + i * 95 / 2)
                 layerFarm:addChild(spriteCrop)
             end
         end
