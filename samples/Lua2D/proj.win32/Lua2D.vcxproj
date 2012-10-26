@@ -113,6 +113,7 @@
     <ClCompile Include="..\..\..\scripting\lua\cocos2dx_support\tolua_fix.c" />
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="XGetopt.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\scripting\lua\cocos2dx_support\CCLuaEngine.h" />
@@ -121,6 +122,7 @@
     <ClInclude Include="..\..\..\scripting\lua\cocos2dx_support\tolua_fix.h" />
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="XGetopt.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\cocos2dx\proj.win32\cocos2d.vcxproj">

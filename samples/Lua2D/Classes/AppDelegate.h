@@ -32,6 +32,10 @@ public:
     @param  the pointer of the application
     */
     virtual void applicationWillEnterForeground();
+
+public:
+	char* m_pLuaCmd;
+	char* m_pLuaScript;
 };
 
 #endif // _APP_DELEGATE_H_

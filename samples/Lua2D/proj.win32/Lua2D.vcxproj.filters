@@ -32,6 +32,9 @@
     <ClCompile Include="..\..\..\scripting\lua\cocos2dx_support\tolua_fix.c">
       <Filter>Classes\cocos2dx-support</Filter>
     </ClCompile>
+    <ClCompile Include="XGetopt.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h">
@@ -51,6 +54,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\scripting\lua\cocos2dx_support\tolua_fix.h">
       <Filter>Classes\cocos2dx-support</Filter>
+    </ClInclude>
+    <ClInclude Include="XGetopt.h">
+      <Filter>win32</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

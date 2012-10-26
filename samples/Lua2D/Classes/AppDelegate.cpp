@@ -11,6 +11,9 @@ AppDelegate::AppDelegate()
 {
     // fixed me
     //_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF|_CRTDBG_LEAK_CHECK_DF);
+
+	m_pLuaCmd = NULL;
+	m_pLuaScript = NULL;
 }
 
 AppDelegate::~AppDelegate()
@@ -18,6 +21,11 @@ AppDelegate::~AppDelegate()
     // end simple audio engine here, or it may crashed on win32
     SimpleAudioEngine::sharedEngine()->end();
     //CCScriptEngineManager::purgeSharedManager();
+
+	if (m_pLuaCmd)
+		delete m_pLuaCmd;
+	if (m_pLuaScript)
+		delete m_pLuaScript;
 }
 
 bool AppDelegate::applicationDidFinishLaunching()
@@ -26,7 +34,10 @@ bool AppDelegate::applicationDidFinishLaunching()
     CCDirector *pDirector = CCDirector::sharedDirector();
     pDirector->setOpenGLView(CCEGLView::sharedOpenGLView());
     
-    CCEGLView::sharedOpenGLView()->setDesignResolutionSize(480, 320, kResolutionShowAll);
+//    CCEGLView::sharedOpenGLView()->setDesignResolutionSize(480, 320, kResolutionShowAll);
+	const float screenWidth = 800;
+    const CCSize& frameSize = CCEGLView::sharedOpenGLView()->getFrameSize();
+	CCEGLView::sharedOpenGLView()->setDesignResolutionSize(screenWidth, screenWidth * frameSize.height / frameSize.width, kResolutionShowAll);
 
     // enable High Resource Mode(2x, such as iphone4) and maintains low resource on other devices.
     // pDirector->enableRetinaDisplay(true);
@@ -41,14 +52,22 @@ bool AppDelegate::applicationDidFinishLaunching()
     CCLuaEngine* pEngine = CCLuaEngine::defaultEngine();
     CCScriptEngineManager::sharedManager()->setScriptEngine(pEngine);
 
+	if (!m_pLuaScript)
+	{
+		const char* szScript = "main.lua";
+		m_pLuaScript = new char[sizeof(szScript)];
+		strcpy(m_pLuaScript, szScript);
+	}
+
+	pEngine->executeString(m_pLuaCmd);
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-    CCString* pstrFileContent = CCString::createWithContentsOfFile("hello.lua");
+    CCString* pstrFileContent = CCString::createWithContentsOfFile(m_pLuaScript);
     if (pstrFileContent)
     {
         pEngine->executeString(pstrFileContent->getCString());
     }
 #else
-    std::string path = CCFileUtils::sharedFileUtils()->fullPathFromRelativePath("hello.lua");
+    std::string path = CCFileUtils::sharedFileUtils()->fullPathFromRelativePath(m_pLuaScript);
     pEngine->addSearchPath(path.substr(0, path.find_last_of("/")).c_str());
     pEngine->executeScriptFile(path.c_str());
 #endif 
