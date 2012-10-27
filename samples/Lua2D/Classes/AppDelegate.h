@@ -2,6 +2,7 @@
 #define  _APP_DELEGATE_H_
 
 #include "CCApplication.h"
+#include "CCLuaEngine.h"
 
 /**
 @brief    The cocos2d Application.
@@ -34,8 +35,11 @@ public:
     virtual void applicationWillEnterForeground();
 
 public:
-	char* m_pLuaCmd;
-	char* m_pLuaScript;
+    std::vector<std::string> m_aLuaCmd;
+	std::vector<std::string> m_aLuaScript;
+
+protected:
+    void execScript(cocos2d::CCLuaEngine* pEngine, const std::string& script);
 };
 
 #endif // _APP_DELEGATE_H_

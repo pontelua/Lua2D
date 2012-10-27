@@ -23,6 +23,7 @@
  ****************************************************************************/
 
 #import <Cocoa/Cocoa.h>
+#import <getopt.h>
 
 #import "AppController.h"
 #import "AppDelegate.h"
@@ -32,6 +33,13 @@ static void parseOptions(AppDelegate* app, int argc, char* argv[]);
 
 int main(int argc, char *argv[])
 {
+	printf("\nLua2D Parameter : ");
+	for (int index = 0; index < argc; index++)
+	{
+        printf("%s ", argv[index]);
+	}
+	printf("\n\n");
+
     parseOptions(&s_sharedApplication, argc, argv);
 
 	return NSApplicationMain(argc, (const char **)argv);
@@ -39,23 +47,32 @@ int main(int argc, char *argv[])
 
 static void parseOptions(AppDelegate* app, int argc, char* argv[])
 {
-	int opt, len;
-	while ((opt = getopt(argc, argv, "e:")) != -1)
-	{
+    static struct option options[] = {
+        { "NSDocumentRevisionsDebugMode",   required_argument, NULL,  0 },
+        { NULL,                             no_argument,       NULL,  0 }
+    };
+
+	int opt, index;
+	while ((opt = getopt_long_only(argc, argv, "e:", options, &index)) != -1)
+    {
 		switch (opt)
 		{
+            case 0:
+                switch (index)
+                {
+                    case 0:
+                        break;
+                }
+                break;
+                
 			case 'e':
-				len = strlen(optarg);
-				app->m_pLuaCmd = new char[len + 1];
-				strcpy(app->m_pLuaCmd, optarg);
+                app->m_aLuaCmd.push_back(optarg);
 				break;
 		}
 	}
     
-	if (optind < argc)
-	{
-		len = strlen(argv[optind]);
-		app->m_pLuaScript = new char[len + 1];
-		strcpy(app->m_pLuaScript, argv[optind]);
+    while (optind < argc)
+    {
+        app->m_aLuaScript.push_back(argv[optind++]);
 	}
 }

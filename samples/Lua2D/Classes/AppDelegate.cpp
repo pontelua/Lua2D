@@ -2,7 +2,6 @@
 #include "AppDelegate.h"
 #include "SimpleAudioEngine.h"
 #include "script_support/CCScriptSupport.h"
-#include "CCLuaEngine.h"
 
 USING_NS_CC;
 using namespace CocosDenshion;
@@ -11,9 +10,6 @@ AppDelegate::AppDelegate()
 {
     // fixed me
     //_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF|_CRTDBG_LEAK_CHECK_DF);
-
-	m_pLuaCmd = NULL;
-	m_pLuaScript = NULL;
 }
 
 AppDelegate::~AppDelegate()
@@ -21,11 +17,6 @@ AppDelegate::~AppDelegate()
     // end simple audio engine here, or it may crashed on win32
     SimpleAudioEngine::sharedEngine()->end();
     //CCScriptEngineManager::purgeSharedManager();
-
-	if (m_pLuaCmd)
-		delete m_pLuaCmd;
-	if (m_pLuaScript)
-		delete m_pLuaScript;
 }
 
 bool AppDelegate::applicationDidFinishLaunching()
@@ -52,28 +43,34 @@ bool AppDelegate::applicationDidFinishLaunching()
     CCLuaEngine* pEngine = CCLuaEngine::defaultEngine();
     CCScriptEngineManager::sharedManager()->setScriptEngine(pEngine);
 
-	if (!m_pLuaScript)
-	{
-		const char* szScript = "main.lua";
-		m_pLuaScript = new char[sizeof(szScript)];
-		strcpy(m_pLuaScript, szScript);
-	}
+    std::vector<std::string>::const_iterator iter;
+    for (iter = m_aLuaCmd.begin(); iter != m_aLuaCmd.end(); iter++)
+		pEngine->executeString(iter->c_str());
 
-	if (m_pLuaCmd)
-		pEngine->executeString(m_pLuaCmd);
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
-    CCString* pstrFileContent = CCString::createWithContentsOfFile(m_pLuaScript);
-    if (pstrFileContent)
+    if (m_aLuaScript.size() > 0)
     {
-        pEngine->executeString(pstrFileContent->getCString());
+        for (iter = m_aLuaScript.begin(); iter != m_aLuaScript.end(); iter++)
+            execScript(pEngine, *iter);
     }
-#else
-    std::string path = CCFileUtils::sharedFileUtils()->fullPathFromRelativePath(m_pLuaScript);
-    pEngine->addSearchPath(path.substr(0, path.find_last_of("/")).c_str());
-    pEngine->executeScriptFile(path.c_str());
-#endif 
+    else
+    {
+        execScript(pEngine, "main.lua");
+    }
 
     return true;
+}
+
+void AppDelegate::execScript(CCLuaEngine* pEngine, const std::string& script)
+{
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
+    CCString* pstrFileContent = CCString::createWithContentsOfFile(script.c_str());
+    if (pstrFileContent)
+        pEngine->executeString(pstrFileContent->getCString());
+#else
+    std::string path = CCFileUtils::sharedFileUtils()->fullPathFromRelativePath(script.c_str());
+    pEngine->addSearchPath(path.substr(0, path.find_last_of("/")).c_str());
+    pEngine->executeScriptFile(path.c_str());
+#endif
 }
 
 // This function will be called when the app is inactive. When comes a phone call,it's be invoked too
