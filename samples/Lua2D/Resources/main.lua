@@ -17,7 +17,7 @@ local function main()
         print(string.format(...))
     end
 
-    require "hello2"
+    require "sub"
     cclog("result is " .. myadd(3, 5))
 
     ---------------
