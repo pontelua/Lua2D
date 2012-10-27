@@ -59,7 +59,8 @@ bool AppDelegate::applicationDidFinishLaunching()
 		strcpy(m_pLuaScript, szScript);
 	}
 
-	pEngine->executeString(m_pLuaCmd);
+	if (m_pLuaCmd)
+		pEngine->executeString(m_pLuaCmd);
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID)
     CCString* pstrFileContent = CCString::createWithContentsOfFile(m_pLuaScript);
     if (pstrFileContent)
