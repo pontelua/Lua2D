@@ -24,7 +24,38 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "AppController.h"
+#import "AppDelegate.h"
+
+extern AppDelegate s_sharedApplication;
+static void parseOptions(AppDelegate* app, int argc, char* argv[]);
+
 int main(int argc, char *argv[])
 {
+    parseOptions(&s_sharedApplication, argc, argv);
+
 	return NSApplicationMain(argc, (const char **)argv);
+}
+
+static void parseOptions(AppDelegate* app, int argc, char* argv[])
+{
+	int opt, len;
+	while ((opt = getopt(argc, argv, "e:")) != -1)
+	{
+		switch (opt)
+		{
+			case 'e':
+				len = strlen(optarg);
+				app->m_pLuaCmd = new char[len + 1];
+				strcpy(app->m_pLuaCmd, optarg);
+				break;
+		}
+	}
+    
+	if (optind < argc)
+	{
+		len = strlen(argv[optind]);
+		app->m_pLuaScript = new char[len + 1];
+		strcpy(app->m_pLuaScript, argv[optind]);
+	}
 }

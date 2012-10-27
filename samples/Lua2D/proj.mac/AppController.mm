@@ -25,7 +25,7 @@
 #import "AppController.h"
 #import "AppDelegate.h"
 
-static AppDelegate s_sharedApplication;
+AppDelegate s_sharedApplication;
 
 @implementation AppController
 
@@ -36,7 +36,7 @@ static AppDelegate s_sharedApplication;
 		// create the window
 		// note that using NSResizableWindowMask causes the window to be a little
 		// smaller and therefore ipad graphics are not loaded
-		NSRect rect = NSMakeRect(200, 200, 480, 320);
+		NSRect rect = NSMakeRect(0, 0, 1280, 768);
 		window = [[NSWindow alloc] initWithContentRect:rect
 			styleMask:( NSClosableWindowMask | NSTitledWindowMask )
 			backing:NSBackingStoreBuffered

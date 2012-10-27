@@ -10,7 +10,6 @@
 		41BC70AD15BF7CCE006A0A6C /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 41BC70AC15BF7CCE006A0A6C /* Icon.icns */; };
 		41BC70B715BF7E14006A0A6C /* libcocos2dx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41CD6C5C15BF74E5005E6F29 /* libcocos2dx.a */; };
 		41CD6C6515BF7574005E6F29 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 41CD6C6315BF7574005E6F29 /* AppController.mm */; };
-		41CD6C6615BF7574005E6F29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41CD6C6415BF7574005E6F29 /* main.m */; };
 		41CD6C6E15BF7673005E6F29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41CD6C6815BF7673005E6F29 /* InfoPlist.strings */; };
 		41CD6C6F15BF7673005E6F29 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41CD6C6A15BF7673005E6F29 /* MainMenu.xib */; };
 		41CD6C7515BF76FB005E6F29 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 41CD6C7115BF76FB005E6F29 /* AppDelegate.cpp */; };
@@ -100,6 +99,7 @@
 		8EB173AC163BA50300295763 /* debugintrospection.lua in Resources */ = {isa = PBXBuildFile; fileRef = 8EB173A8163BA50300295763 /* debugintrospection.lua */; };
 		8EB173AD163BA50300295763 /* main.lua in Resources */ = {isa = PBXBuildFile; fileRef = 8EB173A9163BA50300295763 /* main.lua */; };
 		8EB173AE163BA50300295763 /* sub.lua in Resources */ = {isa = PBXBuildFile; fileRef = 8EB173AA163BA50300295763 /* sub.lua */; };
+		8ECF9210163BAF1A00354EAA /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8ECF920F163BAF1A00354EAA /* main.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,7 +125,6 @@
 		41CD6C5415BF74E5005E6F29 /* cocos2dx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2dx.xcodeproj; path = ../../../cocos2dx/proj.mac/cocos2dx.xcodeproj; sourceTree = "<group>"; };
 		41CD6C6215BF7574005E6F29 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		41CD6C6315BF7574005E6F29 /* AppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppController.mm; sourceTree = "<group>"; };
-		41CD6C6415BF7574005E6F29 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		41CD6C6915BF7673005E6F29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		41CD6C6B15BF7673005E6F29 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = MainMenu.xib; sourceTree = "<group>"; };
 		41CD6C6C15BF7673005E6F29 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -272,6 +271,7 @@
 		8EB173A8163BA50300295763 /* debugintrospection.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = debugintrospection.lua; path = ../Resources/debugintrospection.lua; sourceTree = "<group>"; };
 		8EB173A9163BA50300295763 /* main.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.lua; path = ../Resources/main.lua; sourceTree = "<group>"; };
 		8EB173AA163BA50300295763 /* sub.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sub.lua; path = ../Resources/sub.lua; sourceTree = "<group>"; };
+		8ECF920F163BAF1A00354EAA /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,9 +347,9 @@
 		41CD6C5F15BF7522005E6F29 /* mac */ = {
 			isa = PBXGroup;
 			children = (
+				8ECF920F163BAF1A00354EAA /* main.mm */,
 				41CD6C6215BF7574005E6F29 /* AppController.h */,
 				41CD6C6315BF7574005E6F29 /* AppController.mm */,
-				41CD6C6415BF7574005E6F29 /* main.m */,
 				41BC70AC15BF7CCE006A0A6C /* Icon.icns */,
 				41CD6C6715BF7673005E6F29 /* en.lproj */,
 				41CD6C6C15BF7673005E6F29 /* Info.plist */,
@@ -608,7 +608,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
-				ORGANIZATIONNAME = "Bullets in a Burning Box, Inc.";
+				ORGANIZATIONNAME = "XTmono Systems";
 			};
 			buildConfigurationList = 41851B8C15B93C32004083E9 /* Build configuration list for PBXProject "Lua2D" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -676,7 +676,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				41CD6C6515BF7574005E6F29 /* AppController.mm in Sources */,
-				41CD6C6615BF7574005E6F29 /* main.m in Sources */,
 				41CD6C7515BF76FB005E6F29 /* AppDelegate.cpp in Sources */,
 				8E851496163931DD00EAA234 /* CCLuaEngine.cpp in Sources */,
 				8E851497163931DD00EAA234 /* Cocos2dxLuaLoader.cpp in Sources */,
@@ -740,6 +739,7 @@
 				8E7CD88116394857005B3EF9 /* CocosDenshion.m in Sources */,
 				8E7CD88216394857005B3EF9 /* SimpleAudioEngine.mm in Sources */,
 				8E7CD88316394857005B3EF9 /* SimpleAudioEngine_objc.m in Sources */,
+				8ECF9210163BAF1A00354EAA /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
