@@ -85,8 +85,8 @@ static void parseOptions(AppDelegate* app, int argc, TCHAR* argv[])
 		WideCharToMultiByte(CP_ACP, 0, argv[optind], -1, app->m_pLuaScript, len, NULL, NULL);
 #else
 		len = strlen(argv[optind]);
-		app->m_pLuaCmd = new char[len + 1];
-		strcpy(app->m_pLuaCmd, argv[optind]);
+		app->m_pLuaScript = new char[len + 1];
+		strcpy(app->m_pLuaScript, argv[optind]);
 #endif
 	}
 }
