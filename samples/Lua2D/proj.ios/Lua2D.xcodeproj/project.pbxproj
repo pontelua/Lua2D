@@ -20,12 +20,14 @@
 		78947C7014EBB9B100DBD5A6 /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 78947C6114EBB9B000DBD5A6 /* dog.png */; };
 		78947C7114EBB9B100DBD5A6 /* effect1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 78947C6214EBB9B000DBD5A6 /* effect1.wav */; };
 		78947C7214EBB9B100DBD5A6 /* farm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 78947C6314EBB9B000DBD5A6 /* farm.jpg */; };
-		78947C7414EBB9B100DBD5A6 /* hello.lua in Resources */ = {isa = PBXBuildFile; fileRef = 78947C6614EBB9B000DBD5A6 /* hello.lua */; };
-		78947C7514EBB9B100DBD5A6 /* hello2.lua in Resources */ = {isa = PBXBuildFile; fileRef = 78947C6714EBB9B000DBD5A6 /* hello2.lua */; };
 		78947C7714EBB9B100DBD5A6 /* land.png in Resources */ = {isa = PBXBuildFile; fileRef = 78947C6914EBB9B000DBD5A6 /* land.png */; };
 		78947C7814EBB9B100DBD5A6 /* menu1.png in Resources */ = {isa = PBXBuildFile; fileRef = 78947C6A14EBB9B000DBD5A6 /* menu1.png */; };
 		78947C7914EBB9B100DBD5A6 /* menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 78947C6B14EBB9B000DBD5A6 /* menu2.png */; };
 		78DC4C9A15490B9500317402 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 78DC4C9815490B9500317402 /* Default.png */; };
+		8EB173BC163BA58000295763 /* debugger.lua in Resources */ = {isa = PBXBuildFile; fileRef = 8EB173B8163BA58000295763 /* debugger.lua */; };
+		8EB173BD163BA58000295763 /* debugintrospection.lua in Resources */ = {isa = PBXBuildFile; fileRef = 8EB173B9163BA58000295763 /* debugintrospection.lua */; };
+		8EB173BE163BA58000295763 /* main.lua in Resources */ = {isa = PBXBuildFile; fileRef = 8EB173BA163BA58000295763 /* main.lua */; };
+		8EB173BF163BA58000295763 /* sub.lua in Resources */ = {isa = PBXBuildFile; fileRef = 8EB173BB163BA58000295763 /* sub.lua */; };
 		8EF805351637C1DF006F9EA9 /* auxiliar.c in Sources */ = {isa = PBXBuildFile; fileRef = 8EF8050C1637C1DF006F9EA9 /* auxiliar.c */; };
 		8EF805361637C1DF006F9EA9 /* buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 8EF8050E1637C1DF006F9EA9 /* buffer.c */; };
 		8EF805371637C1DF006F9EA9 /* except.c in Sources */ = {isa = PBXBuildFile; fileRef = 8EF805101637C1DF006F9EA9 /* except.c */; };
@@ -141,12 +143,14 @@
 		78947C6114EBB9B000DBD5A6 /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
 		78947C6214EBB9B000DBD5A6 /* effect1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = effect1.wav; sourceTree = "<group>"; };
 		78947C6314EBB9B000DBD5A6 /* farm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = farm.jpg; sourceTree = "<group>"; };
-		78947C6614EBB9B000DBD5A6 /* hello.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hello.lua; sourceTree = "<group>"; };
-		78947C6714EBB9B000DBD5A6 /* hello2.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hello2.lua; sourceTree = "<group>"; };
 		78947C6914EBB9B000DBD5A6 /* land.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = land.png; sourceTree = "<group>"; };
 		78947C6A14EBB9B000DBD5A6 /* menu1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu1.png; sourceTree = "<group>"; };
 		78947C6B14EBB9B000DBD5A6 /* menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu2.png; sourceTree = "<group>"; };
 		78DC4C9815490B9500317402 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
+		8EB173B8163BA58000295763 /* debugger.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = debugger.lua; sourceTree = "<group>"; };
+		8EB173B9163BA58000295763 /* debugintrospection.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = debugintrospection.lua; sourceTree = "<group>"; };
+		8EB173BA163BA58000295763 /* main.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.lua; sourceTree = "<group>"; };
+		8EB173BB163BA58000295763 /* sub.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sub.lua; sourceTree = "<group>"; };
 		8EF8050C1637C1DF006F9EA9 /* auxiliar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = auxiliar.c; path = socket/auxiliar.c; sourceTree = "<group>"; };
 		8EF8050D1637C1DF006F9EA9 /* auxiliar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = auxiliar.h; path = socket/auxiliar.h; sourceTree = "<group>"; };
 		8EF8050E1637C1DF006F9EA9 /* buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = buffer.c; path = socket/buffer.c; sourceTree = "<group>"; };
@@ -395,6 +399,10 @@
 		78947C5C14EBB9B000DBD5A6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8EB173B8163BA58000295763 /* debugger.lua */,
+				8EB173B9163BA58000295763 /* debugintrospection.lua */,
+				8EB173BA163BA58000295763 /* main.lua */,
+				8EB173BB163BA58000295763 /* sub.lua */,
 				D4EF94DC15BD312100D803EB /* Icon-144.png */,
 				D4EF94DA15BD311E00D803EB /* Icon-72.png */,
 				D4EF94D815BD311A00D803EB /* Icon-114.png */,
@@ -404,8 +412,6 @@
 				78947C6114EBB9B000DBD5A6 /* dog.png */,
 				78947C6214EBB9B000DBD5A6 /* effect1.wav */,
 				78947C6314EBB9B000DBD5A6 /* farm.jpg */,
-				78947C6614EBB9B000DBD5A6 /* hello.lua */,
-				78947C6714EBB9B000DBD5A6 /* hello2.lua */,
 				78947C6914EBB9B000DBD5A6 /* land.png */,
 				78947C6A14EBB9B000DBD5A6 /* menu1.png */,
 				78947C6B14EBB9B000DBD5A6 /* menu2.png */,
@@ -642,8 +648,6 @@
 				78947C7014EBB9B100DBD5A6 /* dog.png in Resources */,
 				78947C7114EBB9B100DBD5A6 /* effect1.wav in Resources */,
 				78947C7214EBB9B100DBD5A6 /* farm.jpg in Resources */,
-				78947C7414EBB9B100DBD5A6 /* hello.lua in Resources */,
-				78947C7514EBB9B100DBD5A6 /* hello2.lua in Resources */,
 				78947C7714EBB9B100DBD5A6 /* land.png in Resources */,
 				78947C7814EBB9B100DBD5A6 /* menu1.png in Resources */,
 				78947C7914EBB9B100DBD5A6 /* menu2.png in Resources */,
@@ -654,6 +658,10 @@
 				D4EF94DD15BD312100D803EB /* Icon-144.png in Resources */,
 				D41A0AA2160F13F8004552AE /* Default-568h@2x.png in Resources */,
 				D446FD3B16102085000ADA7B /* Default@2x.png in Resources */,
+				8EB173BC163BA58000295763 /* debugger.lua in Resources */,
+				8EB173BD163BA58000295763 /* debugintrospection.lua in Resources */,
+				8EB173BE163BA58000295763 /* main.lua in Resources */,
+				8EB173BF163BA58000295763 /* sub.lua in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -850,7 +858,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
@@ -865,6 +873,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv6 armv7 i386";
@@ -876,7 +885,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = OS_IPHONE;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = NO;
@@ -886,6 +895,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv6 armv7 i386";

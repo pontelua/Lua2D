@@ -92,12 +92,14 @@
 		8EA18A4316395130007F2755 /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EA18A3816395130007F2755 /* dog.png */; };
 		8EA18A4416395130007F2755 /* effect1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8EA18A3916395130007F2755 /* effect1.wav */; };
 		8EA18A4516395130007F2755 /* farm.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8EA18A3A16395130007F2755 /* farm.jpg */; };
-		8EA18A4616395130007F2755 /* hello.lua in Resources */ = {isa = PBXBuildFile; fileRef = 8EA18A3B16395130007F2755 /* hello.lua */; };
-		8EA18A4716395130007F2755 /* hello2.lua in Resources */ = {isa = PBXBuildFile; fileRef = 8EA18A3C16395130007F2755 /* hello2.lua */; };
 		8EA18A4816395130007F2755 /* land.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EA18A3D16395130007F2755 /* land.png */; };
 		8EA18A4916395130007F2755 /* menu1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EA18A3E16395130007F2755 /* menu1.png */; };
 		8EA18A4A16395130007F2755 /* menu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EA18A3F16395130007F2755 /* menu2.png */; };
 		8EA18A4C16395144007F2755 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8EA18A4B16395144007F2755 /* Icon.icns */; };
+		8EB173AB163BA50300295763 /* debugger.lua in Resources */ = {isa = PBXBuildFile; fileRef = 8EB173A7163BA50300295763 /* debugger.lua */; };
+		8EB173AC163BA50300295763 /* debugintrospection.lua in Resources */ = {isa = PBXBuildFile; fileRef = 8EB173A8163BA50300295763 /* debugintrospection.lua */; };
+		8EB173AD163BA50300295763 /* main.lua in Resources */ = {isa = PBXBuildFile; fileRef = 8EB173A9163BA50300295763 /* main.lua */; };
+		8EB173AE163BA50300295763 /* sub.lua in Resources */ = {isa = PBXBuildFile; fileRef = 8EB173AA163BA50300295763 /* sub.lua */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -262,12 +264,14 @@
 		8EA18A3816395130007F2755 /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dog.png; path = ../Resources/dog.png; sourceTree = "<group>"; };
 		8EA18A3916395130007F2755 /* effect1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = effect1.wav; path = ../Resources/effect1.wav; sourceTree = "<group>"; };
 		8EA18A3A16395130007F2755 /* farm.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = farm.jpg; path = ../Resources/farm.jpg; sourceTree = "<group>"; };
-		8EA18A3B16395130007F2755 /* hello.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hello.lua; path = ../Resources/hello.lua; sourceTree = "<group>"; };
-		8EA18A3C16395130007F2755 /* hello2.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hello2.lua; path = ../Resources/hello2.lua; sourceTree = "<group>"; };
 		8EA18A3D16395130007F2755 /* land.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = land.png; path = ../Resources/land.png; sourceTree = "<group>"; };
 		8EA18A3E16395130007F2755 /* menu1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu1.png; path = ../Resources/menu1.png; sourceTree = "<group>"; };
 		8EA18A3F16395130007F2755 /* menu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu2.png; path = ../Resources/menu2.png; sourceTree = "<group>"; };
 		8EA18A4B16395144007F2755 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		8EB173A7163BA50300295763 /* debugger.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = debugger.lua; path = ../Resources/debugger.lua; sourceTree = "<group>"; };
+		8EB173A8163BA50300295763 /* debugintrospection.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = debugintrospection.lua; path = ../Resources/debugintrospection.lua; sourceTree = "<group>"; };
+		8EB173A9163BA50300295763 /* main.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.lua; path = ../Resources/main.lua; sourceTree = "<group>"; };
+		8EB173AA163BA50300295763 /* sub.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sub.lua; path = ../Resources/sub.lua; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,6 +361,10 @@
 		41CD6C6115BF7556005E6F29 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8EB173A7163BA50300295763 /* debugger.lua */,
+				8EB173A8163BA50300295763 /* debugintrospection.lua */,
+				8EB173A9163BA50300295763 /* main.lua */,
+				8EB173AA163BA50300295763 /* sub.lua */,
 				8EA18A4B16395144007F2755 /* Icon.icns */,
 				8EA18A3516395130007F2755 /* background.mp3 */,
 				8EA18A3616395130007F2755 /* background.ogg */,
@@ -364,8 +372,6 @@
 				8EA18A3816395130007F2755 /* dog.png */,
 				8EA18A3916395130007F2755 /* effect1.wav */,
 				8EA18A3A16395130007F2755 /* farm.jpg */,
-				8EA18A3B16395130007F2755 /* hello.lua */,
-				8EA18A3C16395130007F2755 /* hello2.lua */,
 				8EA18A3D16395130007F2755 /* land.png */,
 				8EA18A3E16395130007F2755 /* menu1.png */,
 				8EA18A3F16395130007F2755 /* menu2.png */,
@@ -651,12 +657,14 @@
 				8EA18A4316395130007F2755 /* dog.png in Resources */,
 				8EA18A4416395130007F2755 /* effect1.wav in Resources */,
 				8EA18A4516395130007F2755 /* farm.jpg in Resources */,
-				8EA18A4616395130007F2755 /* hello.lua in Resources */,
-				8EA18A4716395130007F2755 /* hello2.lua in Resources */,
 				8EA18A4816395130007F2755 /* land.png in Resources */,
 				8EA18A4916395130007F2755 /* menu1.png in Resources */,
 				8EA18A4A16395130007F2755 /* menu2.png in Resources */,
 				8EA18A4C16395144007F2755 /* Icon.icns in Resources */,
+				8EB173AB163BA50300295763 /* debugger.lua in Resources */,
+				8EB173AC163BA50300295763 /* debugintrospection.lua in Resources */,
+				8EB173AD163BA50300295763 /* main.lua in Resources */,
+				8EB173AE163BA50300295763 /* sub.lua in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
