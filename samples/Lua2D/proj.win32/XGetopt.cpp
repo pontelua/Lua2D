@@ -165,9 +165,10 @@ int getopt(int argc, TCHAR *argv[], TCHAR *optstring)
 
 	if (next == NULL || *next == _T('\0'))
 	{
-//		if (optind == 0)
-//			optind++;
-
+#ifdef _CONSOLE
+		if (optind == 0)
+			optind++;
+#endif
 		if (optind >= argc || argv[optind][0] != _T('-') || argv[optind][1] == _T('\0'))
 		{
 			optarg = NULL;
