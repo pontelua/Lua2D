@@ -198,7 +198,7 @@ bool CCEGLView::Create(LPCTSTR pTitle, int w, int h)
             WS_EX_APPWINDOW | WS_EX_WINDOWEDGE,    // Extended Style For The Window
             kWindowClassName,                                    // Class Name
             wszBuf,                                                // Window Title
-            WS_CAPTION | WS_POPUPWINDOW | WS_MINIMIZEBOX,        // Defined Window Style
+            WS_CAPTION | WS_POPUPWINDOW | WS_MINIMIZEBOX | WS_VISIBLE,        // Defined Window Style
             0, 0,                                                // Window Position
             0,                                                  // Window Width
             0,                                                  // Window Height
@@ -206,6 +206,7 @@ bool CCEGLView::Create(LPCTSTR pTitle, int w, int h)
             NULL,                                                // No Menu
             hInstance,                                            // Instance
             NULL );
+		ShowWindow(m_hWnd, SW_HIDE);
 
         CC_BREAK_IF(! m_hWnd);
 

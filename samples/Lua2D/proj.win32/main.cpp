@@ -103,10 +103,10 @@ static void parseOptions(AppDelegate* app, int argc, TCHAR* argv[])
 	while (optind < argc)
 	{
 #ifdef _UNICODE
-		WideCharToMultiByte(CP_ACP, 0, argv[optind], -1, szBuf, sizeof(szBuf), NULL, NULL);
+		WideCharToMultiByte(CP_ACP, 0, argv[optind++], -1, szBuf, sizeof(szBuf), NULL, NULL);
 		app->m_aLuaScript.push_back(szBuf);
 #else
-		app->m_aLuaScript.push_back(argv[optind]);
+		app->m_aLuaScript.push_back(argv[optind++]);
 #endif
 	}
 }
