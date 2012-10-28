@@ -1,8 +1,8 @@
 #include "main.h"
 #include "AppDelegate.h"
 #include "CCEGLView.h"
-#include "XGetOpt.h"
 
+#include "XGetOpt.h"
 #include <ShellAPI.h>
 
 USING_NS_CC;
@@ -37,7 +37,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 	for (int index = 0; index < argc; index++)
 	{
 		#ifdef _UNICODE
-			char szBuf[1024];
+			char szBuf[MAX_PATH];
 			WideCharToMultiByte(CP_ACP, 0, argv[index], -1, szBuf, sizeof(szBuf), NULL, NULL);
 			CCLOG("%s ", szBuf);
 		#else
@@ -47,7 +47,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 	CCLOG("\n");
 #else//_CONSOLE
 	#ifdef _UNICODE
-		char szBuf[1024];
+		char szBuf[MAX_PATH];
 		WideCharToMultiByte(CP_ACP, 0, lpCmdLine, -1, szBuf, sizeof(szBuf), NULL, NULL);
 		CCLOG("\nLua2D Parameter : %s\n", szBuf);
 	#else
@@ -70,7 +70,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 #endif//_CONSOLE
 
     CCEGLView* eglView = CCEGLView::sharedOpenGLView();
-    eglView->setFrameSize(1280, 768);
+    eglView->setFrameSize(800, 480);
     int ret = CCApplication::sharedApplication()->run();
 
 #ifdef USE_WIN32_CONSOLE
@@ -82,35 +82,31 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 
 static void parseOptions(AppDelegate* app, int argc, TCHAR* argv[])
 {
-	int opt, len;
+	char szBuf[MAX_PATH];
+
+	int opt;
 	while ((opt = getopt(argc, argv, _T("e:"))) != -1)
 	{
 		switch (opt)
 		{
 			case _T('e'):
 #ifdef _UNICODE
-				len = WideCharToMultiByte(CP_ACP, 0, optarg, -1, NULL, 0, NULL, NULL);
-				app->m_pLuaCmd = new char[len + 1];
-				WideCharToMultiByte(CP_ACP, 0, optarg, -1, app->m_pLuaCmd, len, NULL, NULL);
+				WideCharToMultiByte(CP_ACP, 0, optarg, -1, szBuf, sizeof(szBuf), NULL, NULL);
+				app->m_aLuaCmd.push_back(szBuf);
 #else
-				len = strlen(optarg);
-				app->m_pLuaCmd = new char[len + 1];
-				strcpy(app->m_pLuaCmd, optarg);
+				app->m_aLuaCmd.push_back(optarg);
 #endif
 				break;
 		}
 	}
 
-	if (optind < argc)
+	while (optind < argc)
 	{
 #ifdef _UNICODE
-		len = WideCharToMultiByte(CP_ACP, 0, argv[optind], -1, NULL, 0, NULL, NULL);
-		app->m_pLuaScript = new char[len + 1];
-		WideCharToMultiByte(CP_ACP, 0, argv[optind], -1, app->m_pLuaScript, len, NULL, NULL);
+		WideCharToMultiByte(CP_ACP, 0, argv[optind], -1, szBuf, sizeof(szBuf), NULL, NULL);
+		app->m_aLuaScript.push_back(szBuf);
 #else
-		len = strlen(argv[optind]);
-		app->m_pLuaScript = new char[len + 1];
-		strcpy(app->m_pLuaScript, argv[optind]);
+		app->m_aLuaScript.push_back(argv[optind]);
 #endif
 	}
 }
