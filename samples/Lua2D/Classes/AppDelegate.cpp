@@ -24,10 +24,11 @@ bool AppDelegate::applicationDidFinishLaunching()
     // initialize director
     CCDirector *pDirector = CCDirector::sharedDirector();
     pDirector->setOpenGLView(CCEGLView::sharedOpenGLView());
-    
-//    CCEGLView::sharedOpenGLView()->setDesignResolutionSize(480, 320, kResolutionShowAll);
-	const float screenWidth = 800;
-    const CCSize& frameSize = CCEGLView::sharedOpenGLView()->getFrameSize();
+
+	// Setup screen size
+//	CCEGLView::sharedOpenGLView()->setDesignResolutionSize(1280, 768, kResolutionShowAll);
+	const float screenWidth = 1280;
+	const CCSize& frameSize = CCEGLView::sharedOpenGLView()->getFrameSize();
 	CCEGLView::sharedOpenGLView()->setDesignResolutionSize(screenWidth, screenWidth * frameSize.height / frameSize.width, kResolutionShowAll);
 
     // enable High Resource Mode(2x, such as iphone4) and maintains low resource on other devices.
