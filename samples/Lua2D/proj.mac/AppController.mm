@@ -36,7 +36,7 @@ AppDelegate s_sharedApplication;
 		// create the window
 		// note that using NSResizableWindowMask causes the window to be a little
 		// smaller and therefore ipad graphics are not loaded
-		NSRect rect = NSMakeRect(300, 200, 800, 480);
+		NSRect rect = NSMakeRect(300, 200, 1280, 768);
 		window = [[NSWindow alloc] initWithContentRect:rect
 			styleMask:( NSClosableWindowMask | NSTitledWindowMask )
 			backing:NSBackingStoreBuffered
